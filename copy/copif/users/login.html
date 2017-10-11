@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from uk.copify.com/users/login by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Oct 2014 06:35:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login to Copify</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="../7842667/css/bootstrap.min1dbd.css?1392219066" />
+<link rel="stylesheet" type="text/css" href="../7842667/css/color1dbd.css?1392219066" />
+<link rel="stylesheet" type="text/css" href="../7842667/css/dashboard55bd.css?1410861518" />
+<link rel="stylesheet" type="text/css" href="../css/en-gb/locale1dbd.css?1392219066" />
+<script type="text/javascript" src="../7842667/js/jquery.min1dbd.js?1392219066"></script>
+
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="/css/dashboard.ie.css" />
+<![endif]-->
+
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="/css/dashboard.ie7.css" />
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+
+</head>
+<body id="mainsite" class="users-login">
+
+	
+
+<!-- Dashboard navigation -->
+<header id="header-section" class="ha-header ha">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container ha-header-perspective">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<div class="navbar-brand">
+						<a href="../index.html" class="logo_img"></a>	
+					</div>
+				</div>
+				<div class="navbar-collapse collapse">
+					<nav id="ut-navigation">
+						<ul class="nav navbar-nav navbar-right">
+																										<li>
+											<a href="register.html" title="Sign up" class=""><i class="glyphicon glyphicon-user"></i> <span class="">Sign up</span></a>										</li>
+										
+								
+						</ul>
+					</nav>
+				</div>
+
+                		
+		</div>
+	</div>
+</header>
+
+<div class="clearfix"></div>
+
+<div id="main-content">
+	<!-- container -->
+	<div class="container">
+		
+		<!--sidebar if logged in-->
+				  
+		<!-- Main  area -->
+		<div class="content no-sidebar">
+		
+			<!-- flash -->
+			<div class="row flash">
+							</div>
+			
+			<!-- render view -->
+			<div id="pjax-container">
+				
+<div class="row">
+		<div class="auth login">
+			
+						
+			<div class="text-center">
+				<h2>Login</h2>
+			</div>
+			
+			
+			<form action="https://uk.copify.com/users/login" id="UserLoginForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div><div class="form-group required"><label for="UserEmail">Email</label><input name="data[User][email]" class="form-control" placeholder="email" autofocus="autofocus" type="email" id="UserEmail" required="required"/></div><div class="form-group required"><label for="UserPassword">Password</label><input name="data[User][password]" class="form-control" placeholder="password" type="password" id="UserPassword" required="required"/></div>			<div class="form-group remember">
+				<input type="hidden" name="data[User][remember]" id="UserRemember_" value="0"/><input type="checkbox" name="data[User][remember]"  checked="checked" value="1" id="UserRemember"/><label for="UserRemember">Remember me</label>				<a href="reset_password.html" class="forgotPassword">Forgot password?</a>				
+			</div>
+			<div class="submit"><input  class="btn btn-success btn-lg btn-block" type="submit" value="Login"/></div></form>
+			<div class="orSocialDivide">
+				<span>or</span>
+			</div>
+			
+			
+			<div class="socialLogin">
+			
+				<a href="https://www.linkedin.com/uas/oauth2/authorization?response_type=code&amp;client_id=wwnptm0urppm&amp;scope=r_fullprofile+r_emailaddress&amp;state=543238bb9c7fd&amp;redirect_uri=https%3A%2F%2Fuk.copify.com%2Fusers%2Flinkedin_callback%2Flogin%2Fclient" class="socialLogin-button linkedin"></a>				<a href="https://www.facebook.com/dialog/oauth?client_id=117361294953549&amp;redirect_uri=https://uk.copify.com/users/facebook_callback/login/client&amp;scope=email,public_profile" class="socialLogin-button facebook"></a>			
+			</div>	
+			
+		</div>	
+	</div>
+	
+</div>	
+
+<!-- locale warning -->
+<div class="modal fade" tabindex="-1" id="wrong-locale-modal-validation"></div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.getJSON('/locations/locale.json' , function(result) {
+			if(result.message == 'switch') {
+				$.ajax({
+					url: "/users/switch_locale/"+result.response,
+					type: 'GET',
+					dataType: 'html',
+					success: function(modal) {
+						$('#wrong-locale-modal-validation').html(modal);
+						$('#wrong-locale-modal-validation').modal({
+							show: true,
+		    				keyboard: true,
+		    				backdrop: true
+						});
+					}
+				});	
+				
+			}
+			
+		});
+	});
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+		// Removes whitespace from start and end of email field
+		$('input[type=email]').blur(function() {
+			input = $.trim($(this).val());
+			$(this).val(input);
+			// Force the field to refresh as Chrome can't seem to do it by itself
+			$(this).addClass('chr_refresh').removeClass('chr_refresh');
+		});
+    });
+</script>
+			</div>
+			
+		</div>
+
+	</div>
+</div>
+
+<!-- jQuizzle (v1.10.2)
+================================================== -->
+<script src="../7842667/js/jquery.dashboard.js"></script>
+
+<!-- Bootstrap components
+================================================== -->
+<script src="../7842667/js/bootstrap.min.js"></script>
+
+<!-- Other elements to include before </body> tag
+================================================== -->
+	
+<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+$.src='http://v2.zopim.com/?6vrYBkSi2y4JfO0fmBYc3Zg6QmSTEY9R';z.t=+new Date;$.
+type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+</script>
+<!--End of Zopim Live Chat Script-->
+
+
+
+<div style="display:none;">
+
+<!-- Google analytics -->
+<script type="text/javascript">
+/*****************************************
+*	Analytics, see Core/config for setttings
+/****************************************/
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15976992-1']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+	
+	
+	<!-- Google Remarketing Code for general Visitor -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 1024553307;
+	var google_conversion_label = "vOsHCPmsqQMQ2-LF6AM";
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+	</script>
+	<script type="text/javascript" src="../../www.googleadservices.com/pagead/f.txt">
+	</script>
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1024553307/?value=0&amp;label=vOsHCPmsqQMQ2-LF6AM&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>
+	
+
+<!-- AdRoll pixel -->
+<script type="text/javascript">
+adroll_adv_id = "V5TLBCZHI5G4DEXJFJCRSN";
+adroll_pix_id = "4LJ7T4BESRCDXKUXSGU5AG";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script>
+
+
+</div>
+
+
+
+</body>
+
+<!-- Mirrored from uk.copify.com/users/login by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Oct 2014 06:35:53 GMT -->
+</html>

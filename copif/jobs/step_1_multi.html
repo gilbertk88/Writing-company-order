@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+
+<!-- Mirrored from uk.copify.com/jobs/step_1_multi by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Oct 2014 06:39:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Order content : Step 1 Choose Quantity</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min1dbd.css?1392219066" />
+<link rel="stylesheet" type="text/css" href="../css/dashboarda392.css?1412340740" />
+<link rel="stylesheet" type="text/css" href="../css/en-gb/locale1dbd.css?1392219066" />
+<script type="text/javascript" src="../js/jquery.1.8.1.minc934.js?1392219067"></script>
+<script type="text/javascript" src="../js/jquery-ui.1.9.2.minc934.js?1392219067"></script>
+
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="/css/dashboard.ie.css" />
+<![endif]-->
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+<!--[if lt IE 9]>
+  <script src="/js/html5-shiv.js"></script>
+<![endif]-->
+
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="/css/dashboard.ie7.css" />
+<![endif]-->
+
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="/css/dashboard.ie6.css" />
+<![endif]-->
+
+<!-- Alternate language/regional -->
+<link rel="alternate" hreflang="en-US" href="https://us.copify.com/jobs/step_1_multi" />
+<link rel="alternate" hreflang="en-AU" href="https://au.copify.com/jobs/step_1_multi" />
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+
+</head>
+
+<body>
+<div id="outer">  	
+  	
+	<!-- Dashboard navigation -->
+	<div class="topbar" data-dropdown="dropdown">
+		<div class="topbar-inner">
+			<div class="container-fluid">				
+				
+				<a href="../index.html" class="brand"><img src="../img/logo_dashboard1dbd.png?1392219066" alt="" /></a>						
+						<div id="shopping-cart-centered">
+	<div id="shopping-cart">
+		<span class="estimated-delivery" title="Estimated time to delivery">~</span>
+		<span class="estimated-cost" title="Total cost of order inc. taxes">~</span>
+	</div>
+</div>
+
+
+<form style="display:none;">
+	<input type="hidden" value="500" id="shopping-cart-words" />
+	<input type="hidden" value="1" id="shopping-cart-budget-id" />
+</form>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+		var words = $('#shopping-cart-words').val();
+		var budget_id = $('#shopping-cart-budget-id').val();
+
+		// Always try and get the current quote
+		$.ajax({
+			url:'/job_budgets/quote_words/'+words+'/'+budget_id+'/.json',
+			type: 'GET',
+			//async: true,
+			success: function(data){
+				var cost = data.response.cost;
+				var client_deadline = data.response.client_deadline_estimate;
+				var status = data.status;
+				var message = data.message;
+				if(status == 'success') {
+					$('#shopping-cart .estimated-cost').html(cost);
+					$('#shopping-cart .estimated-delivery').html(client_deadline);
+				} else {
+					//console.log(message);
+				}
+			}
+		});
+
+	});
+	
+</script>							
+						<ul class="nav dashboard_auth">
+															<li><a href="../users/login5f88.html?show=true" class="loginlink">Sign in</a></li>		
+													</ul>
+									</div>
+	  	</div>
+	</div>
+	
+	<!-- container -->
+	<div class="container">
+			      
+	    <!-- Main  area -->
+		<div class="content">
+	    	<!-- flash -->
+	    	<div class="row flash">
+	    		<div class="span16">
+	    			 	    		</div>
+	    	</div>
+			
+			<!-- render view -->
+			
+<div class="row flow step_1_multi">
+	
+	<div class="span16">
+		<h1><span class="step">2</span>How many pieces of copy do you need?</h1>
+	</div>
+	
+	<div class="span16">
+		
+		<div class="progress-bar">
+			<div class="progress-bar-value" style="width:33%;"></div>
+		</div>	
+		
+	</div>
+	
+	
+	<div class="span16 selectQuantityMultiple">
+
+		<form action="https://uk.copify.com/jobs/step_1_multi" id="JobStep1MultiForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>			
+			<div class="clearfix ">		  	
+		  		<!-- <label>How many orders do you require?</label> -->
+		  		<div class="input">
+				<select name="data[Order][quantity]" class="mini" id="OrderQuantity">
+<option value="1" selected="selected">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select>				</div>
+	     	</div>
+
+			<div class="nav-buttons">
+			
+				<a href="step_1.html" class="btn nudge-right">Go back</a>			
+				<span class="or"><span>or</span></span>
+			
+				<input type="submit" value="Save and continue" class="btn success step_continue" />
+	
+				<br/>
+			
+				<span class="step_fields_loading" style="display:none;">
+					<img src="../img/indicator1dbd.gif?1392219066" alt="" />				</span>
+			
+	
+	        </div>	
+			
+
+     	</form>		
+		<hr/>
+
+		<div class="csv_message">
+			<a href="step_1_multi_csv.html">Need more than 10 units? Use our CSV upload tool</a>		</div>
+
+	</div>
+	
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	// Show spinner
+	$('.step_continue').click(function() {
+		$('.step_fields_loading').show();
+	});
+	
+});
+</script>			
+	    </div>
+
+	</div>
+	
+</div>
+<script type="text/javascript" src="../js/jquery.placeholder.minc934.js?1392219067"></script>
+<script type="text/javascript" src="../js/jquery.copify4660.js?1393329342"></script>
+<script type="text/javascript" src="../js/bootstrap-modal1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-alerts1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-twipsy1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-popover1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-dropdown1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-scrollspy1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-tabs1dbd.js?1392219066"></script>
+
+	
+<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+$.src='http://v2.zopim.com/?6vrYBkSi2y4JfO0fmBYc3Zg6QmSTEY9R';z.t=+new Date;$.
+type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+</script>
+<!--End of Zopim Live Chat Script-->
+
+
+
+<div style="display:none;">
+
+<!-- Google analytics -->
+<script type="text/javascript">
+/*****************************************
+*	Analytics, see Core/config for setttings
+/****************************************/
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15976992-1']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+	
+	
+	<!-- Google Remarketing Code for general Visitor -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 1024553307;
+	var google_conversion_label = "vOsHCPmsqQMQ2-LF6AM";
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+	</script>
+	<script type="text/javascript" src="../../www.googleadservices.com/pagead/f.txt">
+	</script>
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1024553307/?value=0&amp;label=vOsHCPmsqQMQ2-LF6AM&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>
+	
+
+<!-- AdRoll pixel -->
+<script type="text/javascript">
+adroll_adv_id = "V5TLBCZHI5G4DEXJFJCRSN";
+adroll_pix_id = "4LJ7T4BESRCDXKUXSGU5AG";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script>
+
+
+</div>
+
+
+
+</body>
+
+<!-- Mirrored from uk.copify.com/jobs/step_1_multi by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Oct 2014 06:39:30 GMT -->
+</html>

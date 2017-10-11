@@ -1,0 +1,6 @@
+[21-Jan-2015 03:20:53 America/Chicago] PHP Warning:  require_once(/copify/copy/framework/yii.php): failed to open stream: No such file or directory in /home4/safnest/public_html/principalwriters/index.php on line 12
+[21-Jan-2015 03:20:53 America/Chicago] PHP Fatal error:  require_once(): Failed opening required '/copify/copy/framework/yii.php' (include_path='.:/opt/php54/lib/php') in /home4/safnest/public_html/principalwriters/index.php on line 12
+[21-Jan-2015 03:21:19 America/Chicago] PHP Warning:  require_once(/copify/copy/framework/yii.php): failed to open stream: No such file or directory in /home4/safnest/public_html/principalwriters/index.php on line 12
+[21-Jan-2015 03:21:19 America/Chicago] PHP Fatal error:  require_once(): Failed opening required '/copify/copy/framework/yii.php' (include_path='.:/opt/php54/lib/php') in /home4/safnest/public_html/principalwriters/index.php on line 12
+[21-Jan-2015 03:23:42 America/Chicago] PHP Warning:  require_once(/copify/copy/framework/yii.php): failed to open stream: No such file or directory in /home4/safnest/public_html/principalwriters/index.php on line 12
+[21-Jan-2015 03:23:42 America/Chicago] PHP Fatal error:  require_once(): Failed opening required '/copify/copy/framework/yii.php' (include_path='.:/opt/php54/lib/php') in /home4/safnest/public_html/principalwriters/index.php on line 12

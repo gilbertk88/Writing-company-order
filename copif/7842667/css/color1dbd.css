@@ -1,0 +1,56 @@
+/*
+* Copify
+*/
+::-moz-selection  {
+	color: #FFFFFF;
+	background: #71b644;
+}
+::selection {
+	color: #FFFFFF;
+	background:#71b644;
+}
+a, 
+a:visited { 
+	color: #71b644; 
+}
+.selected {
+	color: #71b644 !important;
+}
+strong { color: #71b644; }
+.icons-ul i { color:#71b644; }
+.ha-header nav a:hover {
+	color: #71b644;
+}
+.hero-title span,
+.parallax-section h1 span {
+	color:#71b644;
+}
+.about-icon {
+	background:#71b644;
+}
+.info h3 {
+	color:#71b644;
+}
+.cta-section {
+	background:#71b644 !important;
+}
+.contact-wrap h3 {
+	color:#71b644;
+}
+.social-title {
+	color:#71b644;
+}
+.count {
+	color:#71b644;
+}
+.footer i {
+	color:#71b644;
+}
+.copyright a:hover {
+	color:#71b644;
+}
+.social-link:hover .social-icon,
+.portfolio-caption {
+	background:rgb(46, 204, 113);
+	background:rgba(46, 204, 113, 0.85);
+}

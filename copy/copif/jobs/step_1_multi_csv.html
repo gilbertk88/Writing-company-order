@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+
+<!-- Mirrored from uk.copify.com/jobs/step_1_multi_csv by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Oct 2014 06:46:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Post Multiple Orders : Create your CSV</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min1dbd.css?1392219066" />
+<link rel="stylesheet" type="text/css" href="../css/dashboarda392.css?1412340740" />
+<link rel="stylesheet" type="text/css" href="../css/en-gb/locale1dbd.css?1392219066" />
+<script type="text/javascript" src="../js/jquery.1.8.1.minc934.js?1392219067"></script>
+<script type="text/javascript" src="../js/jquery-ui.1.9.2.minc934.js?1392219067"></script>
+<link rel="stylesheet" type="text/css" href="../css/chosen1dbd.css?1392219066" /><script type="text/javascript" src="../js/chosen.jquery.min1dbd.js?1392219066"></script>
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="/css/dashboard.ie.css" />
+<![endif]-->
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+<!--[if lt IE 9]>
+  <script src="/js/html5-shiv.js"></script>
+<![endif]-->
+
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="/css/dashboard.ie7.css" />
+<![endif]-->
+
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="/css/dashboard.ie6.css" />
+<![endif]-->
+
+<!-- Alternate language/regional -->
+<link rel="alternate" hreflang="en-US" href="https://us.copify.com/jobs/step_1_multi_csv" />
+<link rel="alternate" hreflang="en-AU" href="https://au.copify.com/jobs/step_1_multi_csv" />
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+
+</head>
+
+<body>
+<div id="outer">  	
+  	
+	<!-- Dashboard navigation -->
+	<div class="topbar" data-dropdown="dropdown">
+		<div class="topbar-inner">
+			<div class="container-fluid">				
+				
+				<a href="../index.html" class="brand"><img src="../img/logo_dashboard1dbd.png?1392219066" alt="" /></a>						
+						<div id="shopping-cart-centered">
+	<div id="shopping-cart">
+		<span class="estimated-delivery" title="Estimated time to delivery">~</span>
+		<span class="estimated-cost" title="Total cost of order inc. taxes">~</span>
+	</div>
+</div>
+
+
+<form style="display:none;">
+	<input type="hidden" value="500" id="shopping-cart-words" />
+	<input type="hidden" value="1" id="shopping-cart-budget-id" />
+</form>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+		var words = $('#shopping-cart-words').val();
+		var budget_id = $('#shopping-cart-budget-id').val();
+
+		// Always try and get the current quote
+		$.ajax({
+			url:'/job_budgets/quote_words/'+words+'/'+budget_id+'/.json',
+			type: 'GET',
+			//async: true,
+			success: function(data){
+				var cost = data.response.cost;
+				var client_deadline = data.response.client_deadline_estimate;
+				var status = data.status;
+				var message = data.message;
+				if(status == 'success') {
+					$('#shopping-cart .estimated-cost').html(cost);
+					$('#shopping-cart .estimated-delivery').html(client_deadline);
+				} else {
+					//console.log(message);
+				}
+			}
+		});
+
+	});
+	
+</script>							
+						<ul class="nav dashboard_auth">
+															<li><a href="../users/login5f88.html?show=true" class="loginlink">Sign in</a></li>		
+													</ul>
+									</div>
+	  	</div>
+	</div>
+	
+	<!-- container -->
+	<div class="container">
+			      
+	    <!-- Main  area -->
+		<div class="content">
+	    	<!-- flash -->
+	    	<div class="row flash">
+	    		<div class="span16">
+	    			 	    		</div>
+	    	</div>
+			
+			<!-- render view -->
+			
+<div class="row flow step_1_multi_csv">
+	
+	<div class="span16">
+		<h1><span class="step">3</span>Bulk upload tool</h1>
+	</div>
+	
+	<div class="span16">
+		
+		<div class="progress-bar">
+			<div class="progress-bar-value" style="width:50%;"></div>
+		</div>	
+		
+	</div>
+	
+	<div class="span16">
+		
+		<h4 class="csv_heading csv_download">1. Download template</h4>
+		<p>Start by downloading our <a href="../csv_example.csv">CSV template</a></p>
+	
+		<hr/>
+	
+		<h4 class="csv_heading csv_edit">2. Edit</h4>
+		<p>Edit the file as required, each row is an individual job (Max. 500 jobs). <a href="#" id="accept" data-controls-modal="modal-from-dom-options" data-backdrop="static" >See all available options</a></p>
+	
+		<hr/>
+	
+		<h4 class="csv_heading csv_save">3. Save</h4>
+		<p>Save the file as a CSV somewhere on your computer</p>
+
+		<div class="">
+			<div class="row">					
+				<div class="span7">
+					<img src="../img/multi_upload_cols1dbd.jpg?1392219066" alt="" />				</div>
+				<div class="span4">
+					<img src="../img/multi_upload_save_win1dbd.jpg?1392219066" alt="" />				</div>	
+			</div>	
+		</div>
+		
+		<hr/>
+		
+		<h4 class="csv_heading csv_upload">4. Upload</h4>
+		<p>Drag and drop your CSV, or click to upload (Max 10mb)</p>
+		
+     	<form action="https://uk.copify.com/jobs/step_1_multi_csv" id="step_1_multi" enctype="multipart/form-data" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>     	
+     	<div class="clearfix">		  	
+	
+			<div id="basic_file_input" class="files" style="display:none;">
+				<input type="file" name="data[Job][csv]"  class="xlarge" id="JobCsv"/>				<span class="help-block add_more">Comma or Tab seperated values (CSV)</span>			
+				<div class='errors'></div>
+				<progress style="display:none;"></progress>
+			</div>
+			
+			<div id="dropzone" class="attachments dropzone">
+				<span class="attachment csv dropzone">Comma or Tab seperated values (CSV)</span>
+				<progress style="display:none;"></progress>
+			</div>	 	
+		
+		</div>
+		
+		<hr/>	
+		
+		<div class="nav-buttons">
+			
+			<a href="step_1_multi.html" class="btn nudge-right">Go back</a>			
+			<span class="or"><span>or</span></span>
+			
+			<input type="submit" value="Save and continue" class="btn success step_continue" />
+	
+			<br/>
+			
+			<span class="step_fields_loading" style="display:none;">
+				<img src="../img/indicator1dbd.gif?1392219066" alt="" />			</span>
+			
+        </div>	
+		
+		</form>		
+	</div>
+
+</div>
+
+
+<!-- CSV field guide -->
+<div class="modal hide fade csv_guide" id="modal-from-dom-options">
+	
+	<div class="modal-header">
+      	<a class="close" href="#">×</a>
+      	<h4>CSV Options</h4>
+    </div>
+    <div class="modal-body">
+		<div class="alert-message block-message">
+		<p>The CSV template contains the following columns. All of these columns must be included and each cell must contain either text or a numerical value in order to be processed successfully.</p>
+		</div>
+		<table>
+			<tr>
+				<td>
+					<h5>Name</h5>
+					<p>Use the <code>name</code> column to give each job a relevant title</p>
+				</td>
+				<td>
+					<h5>Words</h5>
+					<p>The <code>words</code> column can specify a word count of between 100 & 100000 words</p>
+				</td>
+				<td>
+					<h5>Brief</h5>
+					<p>Provide a detailed <code>brief</code> with your exact requirements</p>	
+				</td>	
+			</tr>	
+			<tr>
+				<td width="120">
+					<h5>Type</h5>
+					<p>In the <code>type</code> column, select one of the following options:</p>
+					<ul>
+						<li>Article</li>
+						<li>Press release</li>
+						<li>Web page</li>
+						<li>Blog</li>
+						<li>Review</li>
+					</ul>
+				</td>
+				<td>
+					<h5>Quality</h5>
+					<p>In the <code>quality</code> column, specify either <strong>standard</strong> or <strong>professional</strong> copy</p>
+				</td>	
+				<td>
+					<h5>Category</h5>
+					<p>Select a relevant <code>category</code> for your job. You can choose from any of the following:</p>
+					<select name="data[category]" class="chzn-select" id="category">
+<option value="1">Accountancy</option>
+<option value="2">Advertising</option>
+<option value="735">Advice</option>
+<option value="37">Aeronautics and Aerospace</option>
+<option value="41">Agriculture</option>
+<option value="47">Animals</option>
+<option value="49">Anthropology and Archaeology</option>
+<option value="52">Antiques and Collectibles</option>
+<option value="3">Art</option>
+<option value="57">Artificial Life</option>
+<option value="64">Astronomy</option>
+<option value="66">Auctions</option>
+<option value="67">Audio</option>
+<option value="74">Aviation</option>
+<option value="75">Awards</option>
+<option value="78">Bathroom</option>
+<option value="79">Beauty</option>
+<option value="81">Bedroom</option>
+<option value="83">Bibliographies</option>
+<option value="85">Bingo</option>
+<option value="86">Biographies</option>
+<option value="87">Biology</option>
+<option value="90">Blogs</option>
+<option value="96">Books and Literature</option>
+<option value="104">Building and Construction</option>
+<option value="4">Business</option>
+<option value="121">Calendar</option>
+<option value="126">Career and Vocational</option>
+<option value="5">Careers </option>
+<option value="6">Cars</option>
+<option value="128">Casinos</option>
+<option value="129">Catering and Food</option>
+<option value="134">Charity</option>
+<option value="145">Chemicals</option>
+<option value="146">Chemistry</option>
+<option value="147">Children</option>
+<option value="739">Clairvoyance</option>
+<option value="149">Classifieds</option>
+<option value="150">Cleaning</option>
+<option value="151">Clothing</option>
+<option value="156">Comedy</option>
+<option value="7">Communication</option>
+<option value="731">Competitions</option>
+<option value="8">Computers</option>
+<option value="173">Conferences and Events</option>
+<option value="182">Cooking</option>
+<option value="187">Crafts</option>
+<option value="190">Crime</option>
+<option value="197">Dance</option>
+<option value="203">Dating</option>
+<option value="205">Death</option>
+<option value="206">Debt Advice</option>
+<option value="209">Design</option>
+<option value="217">Dictionaries</option>
+<option value="223">Disabilities</option>
+<option value="229">DIY</option>
+<option value="234">Driving Schools</option>
+<option value="240">Ecology</option>
+<option value="241">eCommerce</option>
+<option value="242">Economics</option>
+<option value="244">Education</option>
+<option value="251">Electronics</option>
+<option value="255">Emergency Services</option>
+<option value="259">Energy</option>
+<option value="260">Engineering</option>
+<option value="9">Entertainment</option>
+<option value="266">Environment and Nature</option>
+<option value="273">Etiquette</option>
+<option value="10">Family</option>
+<option value="282">Fancy Dress</option>
+<option value="284">FAQs</option>
+<option value="11">Fashion</option>
+<option value="12">Films</option>
+<option value="13">Finance</option>
+<option value="293">Financial</option>
+<option value="295">First Aid</option>
+<option value="299">Flags</option>
+<option value="301">Flights</option>
+<option value="302">Flowers</option>
+<option value="304">Folklore</option>
+<option value="14">Food and Drink</option>
+<option value="309">For Sale</option>
+<option value="310">Forensics</option>
+<option value="737">Furniture</option>
+<option value="322">Gaming</option>
+<option value="325">Genealogy</option>
+<option value="326">General</option>
+<option value="331">Geography</option>
+<option value="332">Geology and Geophysics</option>
+<option value="333">Gifts</option>
+<option value="335">Glasses</option>
+<option value="339">Government</option>
+<option value="342">Graphics</option>
+<option value="343">Guides</option>
+<option value="344">Hardware</option>
+<option value="346">Health</option>
+<option value="15">Health and Fitness</option>
+<option value="355">History</option>
+<option value="16">Hobbies</option>
+<option value="34">Holidays</option>
+<option value="17">Home and Garden</option>
+<option value="373">Hotels</option>
+<option value="376">Humanities</option>
+<option value="391">Instruments</option>
+<option value="18">Insurance</option>
+<option value="394">Intellectual Property</option>
+<option value="19">Interior Design</option>
+<option value="20">Internet</option>
+<option value="404">Jewelry</option>
+<option value="409">Journals</option>
+<option value="411">Kitchen</option>
+<option value="414">Language and Linguistics</option>
+<option value="416">Law</option>
+<option value="21">Legal</option>
+<option value="419">Legislation</option>
+<option value="35">Leisure</option>
+<option value="420">Library</option>
+<option value="424">Literacy</option>
+<option value="426">Loans</option>
+<option value="430">Lyrics</option>
+<option value="432">Magazines</option>
+<option value="435">Magic</option>
+<option value="23">Management</option>
+<option value="438">Maps</option>
+<option value="24">Marketing</option>
+<option value="440">Martial Arts</option>
+<option value="441">Mathematics</option>
+<option value="442">Measurements and Units</option>
+<option value="444">Medicine</option>
+<option value="446">Men</option>
+<option value="448">Mental Health</option>
+<option value="449">Merchandise</option>
+<option value="450">Meteorology</option>
+<option value="451">Midwifery</option>
+<option value="452">Military</option>
+<option value="454">Mobile Phones</option>
+<option value="457">Money</option>
+<option value="458">Mortgages</option>
+<option value="459">Motorcycles</option>
+<option value="460">Movies</option>
+<option value="462">Multimedia</option>
+<option value="464">Museums, Galleries, and Centers</option>
+<option value="25">Music</option>
+<option value="475">News</option>
+<option value="487">Nursing</option>
+<option value="488">Nutrition</option>
+<option value="489">Office Products</option>
+<option value="33">Other</option>
+<option value="503">Outdoors</option>
+<option value="505">Outsourcing</option>
+<option value="509">Patents</option>
+<option value="511">People</option>
+<option value="513">Performing Arts</option>
+<option value="515">Perfume</option>
+<option value="519">Pets</option>
+<option value="521">Pharmacy</option>
+<option value="522">Philanthropy</option>
+<option value="523">Photography</option>
+<option value="524">Physics</option>
+<option value="527">Poker</option>
+<option value="528">Policy</option>
+<option value="529">Politics</option>
+<option value="532">Printers</option>
+<option value="533">Privacy</option>
+<option value="534">Private Investigation</option>
+<option value="538">Programming</option>
+<option value="541">Property</option>
+<option value="543">Psychology</option>
+<option value="544">Public Health and Safety</option>
+<option value="545">Publications</option>
+<option value="547">Quotes</option>
+<option value="548">Radio</option>
+<option value="553">Reference</option>
+<option value="26">Relationships</option>
+<option value="558">Religion</option>
+<option value="565">Reviews</option>
+<option value="27">Sales</option>
+<option value="570">Science</option>
+<option value="576">Search Engine Optimization</option>
+<option value="579">Seasonal</option>
+<option value="580">Security</option>
+<option value="591">Sexual Health</option>
+<option value="28">Shopping </option>
+<option value="610">Society</option>
+<option value="611">Software</option>
+<option value="616">Space</option>
+<option value="620">Sport</option>
+<option value="29">Sports</option>
+<option value="627">Standards</option>
+<option value="630">Statistics</option>
+<option value="633">Stocks and Shares</option>
+<option value="634">Storage</option>
+<option value="640">Support Groups</option>
+<option value="642">Surveys</option>
+<option value="30">Tax</option>
+<option value="643">Taxes</option>
+<option value="646">Technology</option>
+<option value="31">Technology</option>
+<option value="651">Telecommunications</option>
+<option value="653">Television</option>
+<option value="656">Theatre</option>
+<option value="659">Time</option>
+<option value="660">Tools</option>
+<option value="665">Toys and Games</option>
+<option value="670">Traffic and Road Conditions</option>
+<option value="672">Training</option>
+<option value="673">Translation</option>
+<option value="674">Transportation</option>
+<option value="676">Travel</option>
+<option value="36">Travel</option>
+<option value="32">TV</option>
+<option value="682">TV</option>
+<option value="693">Video</option>
+<option value="704">Weather</option>
+<option value="718">Weddings</option>
+<option value="738">White goods</option>
+<option value="725">Work</option>
+</select>				</td>	
+			</tr>	
+		</table>
+	</div>
+</div>
+
+<script type="text/javascript" src="../js/drag-drop1dbd.js?1392219066"></script><script type="text/javascript">
+$(document).ready(function() {
+	
+	// =======================================
+	// = Chozen=
+	// =======================================
+	$(".chzn-select").chosen({
+		no_results_text: "Invalid selection"
+	});
+	
+	// Show spinner
+	$('.step_continue').click(function() {
+		$('.step_fields_loading').show();
+	});
+
+	/**
+	 * Drag and drop + ajax uploading
+	 */
+	
+	// Orignal (hidden) file upload button, we may need to clone this later!
+	var JobCsvInput = $('#JobCsv');
+	
+	// Hides dropzone and show normal file input for users on rubbish browsers
+	if ((!window.File && !window.FileList && !window.FileReader) || ($.browser.msie || $.browser.safari)) {
+		$('#dropzone').hide();
+		$('#basic_file_input').show();
+	}
+
+	// Drag and drop handlers
+	dragDrop({
+		id: '#dropzone',
+		dragleave: function(e){
+			$(e.target).removeClass('hover');
+		},
+		dragover: function(e){
+			$(e.target).addClass('hover');
+		},
+		drop: function(e){
+			e.preventDefault();
+			e.stopPropagation();
+
+			var file = e.originalEvent.dataTransfer.files[0]; // Gets dropped in file
+			
+			upload_csv(file);
+			
+		}
+	});
+
+	 // Handle upload progress
+	 function progressHandlingFunction(e){
+	    if(e.hasOwnProperty('total')){
+	    	//console.log(e);
+	        $('progress').attr({value:e.loaded, max:e.total});
+	    }
+	}
+
+	/**
+	 * Uplaods CSV via Ajax.
+	 *
+	 * @author Chris Green
+	 * @param  object file File object 
+	 */
+	function upload_csv(file) {
+
+		try {
+
+			if (window.File && window.FileList && window.FileReader && !$.browser.msie && !$.browser.safari) {
+				
+				// Get the form data
+				var formData = new FormData($('#step_1_multi')[0]);
+			
+				// Drag/drop or clicked? Get file either wat
+				if (file) {
+					formData.append('data[Job][csv]', file); // dropped
+				} else {
+					var file = $('#JobCsv')[0].files[0];	// clicked
+				}
+			
+				// Bottom span in dropzone. Is replaced with error/success msgs and progress bar
+				var info_span = $('#dropzone .attachment.csv');
+				
+				// Check length max 10mb 10485760
+				if (file.size > 10485760) {
+					info_span.html('');
+				  	info_span.html("Maximum 10mb allowed").addClass('error');
+					throw "File too big Max 10mb";
+				}
+
+				info_span.hide();
+			    $('progress').show();
+				$('#dropzone').removeClass('okeedokey');
+
+			 	$.ajax({
+			 		type: "POST",
+			 		url: "/jobs/ajax_csv_upload.json",
+			 		xhr: function() {  // custom xhr
+			            myXhr = $.ajaxSettings.xhr();
+			            if(myXhr.upload){ // check if upload property exists
+			                myXhr.upload.addEventListener('progress', progressHandlingFunction, false); // for handling the progress of the upload
+			            }
+			            return myXhr;
+			        },
+			 		success: function(data, textStatus, jqXHR) {
+		 			
+			 			$('progress').hide();
+			 			info_span.show();
+
+			 			if(data.hasOwnProperty('success')) {
+
+			 				info_span.removeClass('error');
+			 				info_span.html('');
+			 				info_span.html(data.success.filename);
+			
+							$('#dropzone').addClass('okeedokey');
+
+			 				$("#JobCsv").val('');
+		
+			 			} else if(data.hasOwnProperty('error')) {
+			 				info_span.html('');
+			 				info_span.html(data.error).addClass('error');
+			 			} else {
+							$('#dropzone').removeClass('okeedokey');
+			 			}
+
+			 			$('#dropzone').removeClass('hover');
+
+			 		},
+			 		error: function(jqXHR, textStatus, errorThrown) {
+			 			$('progress').hide();
+			 			info_span.show();
+			 			$('#dropzone').removeClass('hover');
+			 		},
+			 		timeout: 100000,
+			 		data: formData,
+			 		cache: false,
+			        contentType: false,
+			        processData: false
+			 	});
+			}
+		
+		} catch(err) {
+			$('#dropzone').removeClass('okeedokey');
+			$('#dropzone').removeClass('hover');
+			
+			// If we've tried a massive file via click then drop another thats ok
+			// the original maasive file is still on the input value. It's readonly
+			// So we have to remove and start again.
+			JobCsvInput.replaceWith(JobCsvInput = JobCsvInput.clone(true));
+			console.log(err.message);
+		}
+		 	
+	}
+
+	// Normal file input. Used when dropzone clicked on
+	$('#JobCsv').change(function() {
+		if (window.File && window.FileList && window.FileReader && !$.browser.msie && !$.browser.safari) {
+			upload_csv();
+		}
+	});
+
+	// Trigger normal file input window on click
+	$("#dropzone").on('click', function(event){
+	 	event.preventDefault()
+	 	$('#JobCsv').trigger('click');
+	});
+
+});	
+
+</script>
+			
+	    </div>
+
+	</div>
+	
+</div>
+<script type="text/javascript" src="../js/jquery.placeholder.minc934.js?1392219067"></script>
+<script type="text/javascript" src="../js/jquery.copify4660.js?1393329342"></script>
+<script type="text/javascript" src="../js/bootstrap-modal1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-alerts1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-twipsy1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-popover1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-dropdown1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-scrollspy1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-tabs1dbd.js?1392219066"></script>
+
+	
+<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+$.src='http://v2.zopim.com/?6vrYBkSi2y4JfO0fmBYc3Zg6QmSTEY9R';z.t=+new Date;$.
+type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+</script>
+<!--End of Zopim Live Chat Script-->
+
+
+
+<div style="display:none;">
+
+<!-- Google analytics -->
+<script type="text/javascript">
+/*****************************************
+*	Analytics, see Core/config for setttings
+/****************************************/
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15976992-1']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+	
+	
+	<!-- Google Remarketing Code for general Visitor -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 1024553307;
+	var google_conversion_label = "vOsHCPmsqQMQ2-LF6AM";
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+	</script>
+	<script type="text/javascript" src="../../www.googleadservices.com/pagead/f.txt">
+	</script>
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1024553307/?value=0&amp;label=vOsHCPmsqQMQ2-LF6AM&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>
+	
+
+<!-- AdRoll pixel -->
+<script type="text/javascript">
+adroll_adv_id = "V5TLBCZHI5G4DEXJFJCRSN";
+adroll_pix_id = "4LJ7T4BESRCDXKUXSGU5AG";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script>
+
+
+</div>
+
+
+
+</body>
+
+<!-- Mirrored from uk.copify.com/jobs/step_1_multi_csv by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Oct 2014 06:46:38 GMT -->
+</html>

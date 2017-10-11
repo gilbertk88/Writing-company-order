@@ -1,0 +1,124 @@
+<?php
+/* @var $this TblArticleOrderController */
+/* @var $model TblArticleOrder */
+/* @var $form CActiveForm */
+?>
+
+<div class="form">
+
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'tbl-article-order-form',
+	// Please note: When you enable ajax validation, make sure the corresponding
+	// controller action is handling ajax validation correctly.
+	// There is a call to performAjaxValidation() commented in generated controller code.
+	// See class documentation of CActiveForm for details on this.
+	'enableAjaxValidation'=>false,
+)); ?>
+
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
+
+	<?php echo $form->errorSummary($model); ?>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'content_type'); ?>
+		<?php echo $form->textField($model,'content_type'); ?>
+		<?php echo $form->error($model,'content_type'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'words'); ?>
+		<?php echo $form->textField($model,'words',array('size'=>6,'maxlength'=>6)); ?>
+		<?php echo $form->error($model,'words'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'subject'); ?>
+		<?php echo $form->textField($model,'subject',array('size'=>60,'maxlength'=>140)); ?>
+		<?php echo $form->error($model,'subject'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'branded_generic'); ?>
+		<?php echo $form->textField($model,'branded_generic'); ?>
+		<?php echo $form->error($model,'branded_generic'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'keywords'); ?>
+		<?php echo $form->textField($model,'keywords',array('size'=>60,'maxlength'=>250)); ?>
+		<?php echo $form->error($model,'keywords'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'attach_file_path'); ?>
+		<?php echo $form->textField($model,'attach_file_path',array('size'=>60,'maxlength'=>500)); ?>
+		<?php echo $form->error($model,'attach_file_path'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'additional_info'); ?>
+		<?php echo $form->textField($model,'additional_info',array('size'=>60,'maxlength'=>500)); ?>
+		<?php echo $form->error($model,'additional_info'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'status'); ?>
+		<?php echo $form->textField($model,'status'); ?>
+		<?php echo $form->error($model,'status'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'date_created'); ?>
+		<?php echo $form->textField($model,'date_created'); ?>
+		<?php echo $form->error($model,'date_created'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'Deadline'); ?>
+		<?php echo $form->textField($model,'Deadline'); ?>
+		<?php echo $form->error($model,'Deadline'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'date_completed'); ?>
+		<?php echo $form->textField($model,'date_completed'); ?>
+		<?php echo $form->error($model,'date_completed'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'Writer'); ?>
+		<?php echo $form->textField($model,'Writer'); ?>
+		<?php echo $form->error($model,'Writer'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'Review'); ?>
+		<?php echo $form->textField($model,'Review'); ?>
+		<?php echo $form->error($model,'Review'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'owner'); ?>
+		<?php echo $form->textField($model,'owner'); ?>
+		<?php echo $form->error($model,'owner'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'cost'); ?>
+		<?php echo $form->textField($model,'cost'); ?>
+		<?php echo $form->error($model,'cost'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'payment_status'); ?>
+		<?php echo $form->textField($model,'payment_status'); ?>
+		<?php echo $form->error($model,'payment_status'); ?>
+	</div>
+
+	<div class="row buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	</div>
+
+<?php $this->endWidget(); ?>
+
+</div><!-- form -->

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+
+<!-- Mirrored from uk.copify.com/jobs/step_1?job_type_id=2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Oct 2014 06:45:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Order content : Step 1</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min1dbd.css?1392219066" />
+<link rel="stylesheet" type="text/css" href="../css/dashboarda392.css?1412340740" />
+<link rel="stylesheet" type="text/css" href="../css/en-gb/locale1dbd.css?1392219066" />
+<script type="text/javascript" src="../js/jquery.1.8.1.minc934.js?1392219067"></script>
+<script type="text/javascript" src="../js/jquery-ui.1.9.2.minc934.js?1392219067"></script>
+
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="/css/dashboard.ie.css" />
+<![endif]-->
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+<!--[if lt IE 9]>
+  <script src="/js/html5-shiv.js"></script>
+<![endif]-->
+
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="/css/dashboard.ie7.css" />
+<![endif]-->
+
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="/css/dashboard.ie6.css" />
+<![endif]-->
+
+<!-- Alternate language/regional -->
+<link rel="alternate" hreflang="en-US" href="https://us.copify.com/jobs/step_1" />
+<link rel="alternate" hreflang="en-AU" href="https://au.copify.com/jobs/step_1" />
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+
+</head>
+
+<body>
+<div id="outer">  	
+  	
+	<!-- Dashboard navigation -->
+	<div class="topbar" data-dropdown="dropdown">
+		<div class="topbar-inner">
+			<div class="container-fluid">				
+				
+				<a href="../index.html" class="brand"><img src="../img/logo_dashboard1dbd.png?1392219066" alt="" /></a>						
+						<div id="shopping-cart-centered">
+	<div id="shopping-cart">
+		<span class="estimated-delivery" title="Estimated time to delivery">~</span>
+		<span class="estimated-cost" title="Total cost of order inc. taxes">~</span>
+	</div>
+</div>
+
+
+<form style="display:none;">
+	<input type="hidden" value="500" id="shopping-cart-words" />
+	<input type="hidden" value="1" id="shopping-cart-budget-id" />
+</form>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+		var words = $('#shopping-cart-words').val();
+		var budget_id = $('#shopping-cart-budget-id').val();
+
+		// Always try and get the current quote
+		$.ajax({
+			url:'/job_budgets/quote_words/'+words+'/'+budget_id+'/.json',
+			type: 'GET',
+			//async: true,
+			success: function(data){
+				var cost = data.response.cost;
+				var client_deadline = data.response.client_deadline_estimate;
+				var status = data.status;
+				var message = data.message;
+				if(status == 'success') {
+					$('#shopping-cart .estimated-cost').html(cost);
+					$('#shopping-cart .estimated-delivery').html(client_deadline);
+				} else {
+					//console.log(message);
+				}
+			}
+		});
+
+	});
+	
+</script>							
+						<ul class="nav dashboard_auth">
+															<li><a href="../users/login5f88.html?show=true" class="loginlink">Sign in</a></li>		
+													</ul>
+									</div>
+	  	</div>
+	</div>
+	
+	<!-- container -->
+	<div class="container">
+			      
+	    <!-- Main  area -->
+		<div class="content">
+	    	<!-- flash -->
+	    	<div class="row flash">
+	    		<div class="span16">
+	    			 	    		</div>
+	    	</div>
+			
+			<!-- render view -->
+			
+
+<div class="row flow step_1">
+	
+	<div class="span16">
+		
+		<h1><span class="step">1</span>What type of content do you need?</h1>
+
+	</div>
+	
+	<div class="span16">
+		
+		<div class="progress-bar">
+			<div class="progress-bar-value" style="width:20%;"></div>
+		</div>	
+		
+	</div>
+	
+	<div class="span16">
+				</div>
+	
+	<div class="span16">
+		
+		<form action="https://uk.copify.com/jobs/step_1?job_type_id=2" id="JobStep1Form" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div><input type="hidden" name="data[0][Job][job_budget_id]" value="1" id="0JobJobBudgetId"/>	
+		<div class="clearfix">	
+		  				
+		  	<div class="job_type type_1 selected even">
+			  	<ul class="inputs-list">
+		    		<li>
+		         		 <label>
+			            	<input type="radio" checked="checked" value="1" id="JobJobTypeId1" name="data[0][Job][job_type_id]">
+			            	<span>Article</span>
+		          		</label>
+			    	</li>
+			  	</ul>
+			</div>
+			
+						
+		  	<div class="job_type type_2 ">
+			  	<ul class="inputs-list">
+		    		<li>
+		         		 <label>
+			            	<input type="radio" yes value="2" id="JobJobTypeId2" name="data[0][Job][job_type_id]">
+			            	<span>Press Release</span>
+		          		</label>
+			    	</li>
+			  	</ul>
+			</div>
+			
+						
+		  	<div class="job_type type_3  even">
+			  	<ul class="inputs-list">
+		    		<li>
+		         		 <label>
+			            	<input type="radio" yes value="3" id="JobJobTypeId3" name="data[0][Job][job_type_id]">
+			            	<span>Web Page</span>
+		          		</label>
+			    	</li>
+			  	</ul>
+			</div>
+			
+						
+		  	<div class="job_type type_4 ">
+			  	<ul class="inputs-list">
+		    		<li>
+		         		 <label>
+			            	<input type="radio" yes value="4" id="JobJobTypeId4" name="data[0][Job][job_type_id]">
+			            	<span>Blog</span>
+		          		</label>
+			    	</li>
+			  	</ul>
+			</div>
+			
+						
+		  	<div class="job_type type_6  even">
+			  	<ul class="inputs-list">
+		    		<li>
+		         		 <label>
+			            	<input type="radio" yes value="6" id="JobJobTypeId6" name="data[0][Job][job_type_id]">
+			            	<span>Review</span>
+		          		</label>
+			    	</li>
+			  	</ul>
+			</div>
+			
+						
+		  	<div class="job_type type_7 ">
+			  	<ul class="inputs-list">
+		    		<li>
+		         		 <label>
+			            	<input type="radio" yes value="7" id="JobJobTypeId7" name="data[0][Job][job_type_id]">
+			            	<span>Product Description</span>
+		          		</label>
+			    	</li>
+			  	</ul>
+			</div>
+			
+						
+		  	<div class="job_type type_8  even">
+			  	<ul class="inputs-list">
+		    		<li>
+		         		 <label>
+			            	<input type="radio" yes value="8" id="JobJobTypeId8" name="data[0][Job][job_type_id]">
+			            	<span>Social Media</span>
+		          		</label>
+			    	</li>
+			  	</ul>
+			</div>
+			
+						
+		  	<div class="job_type type_5 ">
+			  	<ul class="inputs-list">
+		    		<li>
+		         		 <label>
+			            	<input type="radio" yes value="5" id="JobJobTypeId5" name="data[0][Job][job_type_id]">
+			            	<span>Misc</span>
+		          		</label>
+			    	</li>
+			  	</ul>
+			</div>
+			
+						
+     	</div>
+		
+	  	<div class="clearfix enterwords">	  		
+			<div class="input">
+				<input name="data[0][Job][words]" class="wordcount" value="500" type="number" id="0JobWords" required="required"/>				<span class="help-block">How many words do you require? <span class="questionHelp word-guide">&nbsp;</span></span>		 	
+			</div>
+     	</div>	  		
+
+		<div class="nav-buttons">
+			
+			<input type="submit" value="Save and continue" class="btn success step_continue" />
+			
+			<span class="or"><span>or</span></span>
+			
+			<a href="step_1_multi.html" class="btn">Place bulk order</a>			
+			<br/>
+			
+			<span class="step_fields_loading" style="display:none;">
+				<img src="../img/indicator1dbd.gif?1392219066" alt="" />			</span>
+			
+			
+        </div>	
+        
+		</form>		
+	</div>
+
+</div>
+
+
+<!-- Brief help -->
+<div class="modal hide fade" id="modal-word-guide">
+	
+	<div class="modal-header">
+      	<a class="close" href="#">×</a>
+      	<h4>How many words should I choose?</h4>
+    </div>
+    <div class="modal-body">
+		<table class="zebra-striped">
+			<thead>
+				<tr>
+				<th>Type of copy</th>
+				<th>Recommended words</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Article</td>
+					<td>500</td>
+				</tr>
+				<tr>
+					<td>Press Release</td>
+					<td>400</td>
+				</tr>
+				<tr>
+					<td>Web Page</td>
+					<td>400</td>
+				</tr>
+				<tr>
+					<td>Blog Post</td>
+					<td>400</td>
+				</tr>
+				<tr>
+					<td>Review</td>
+					<td>200</td>
+				</tr>
+				<tr>
+					<td>Product Description</td>
+					<td>150</td>
+				</tr>
+				
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+<!-- locale warning -->
+<div class="modal hide fade" id="wrong-locale-modal-validation"></div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.getJSON('/locations/locale.json' , function(result) {
+			if(result.message == 'switch') {
+				$.ajax({
+					url: "/users/switch_locale/"+result.response,
+					type: 'GET',
+					dataType: 'html',
+					success: function(modal) {
+						$('#wrong-locale-modal-validation').html(modal);
+						$('#wrong-locale-modal-validation').modal({
+							show: true,
+		    				keyboard: true,
+		    				backdrop: true
+						});
+					}
+				});	
+				
+			}
+			
+		});
+	});
+</script>
+	
+<script type="text/javascript">
+
+	// Return value of given URL param name 
+	function getURLParameter(name) {
+	    return decodeURI(
+	        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+	    );
+	}
+	
+	function IsNumeric(input) {
+	    return (input - 0) == input && (input+'').replace(/^\s+|\s+$/g, "").length > 0;
+	}
+	
+	function getCost() {
+		
+		var words = $('#0JobWords').val();
+		
+		var budget_id = $('#0JobJobBudgetId').val();
+		
+		$('.wordcount').addClass('loading');
+		
+		setTimeout(function(){
+			
+			$.ajax({
+				url:'/job_budgets/quote_words/'+words+'/'+budget_id+'/.json',
+				type: 'GET',
+				//async: true,
+				success: function(data){
+					var cost = data.response.cost;
+					var client_deadline = data.response.client_deadline_estimate;
+					var status = data.status;
+					var message = data.message;
+					$('.wordcount').removeClass('loading');
+					if(status == 'success') {
+						$('#shopping-cart .estimated-cost').html(cost);
+						$('#shopping-cart .estimated-delivery').html(client_deadline);
+					} else {
+						//console.log(message);
+					}
+				}
+			});
+		
+		} , 600);
+	}
+
+	$(document).ready(function() {
+		
+		
+		// on change event on word count
+		$("#0JobWords").keyup(function() {
+			getCost();
+		});
+		
+		// Bind click to chunky buttons
+		$(".job_type").click(function() {
+			
+			// Remove active class and checked state from all by default
+			$(".job_type").removeClass('selected');
+			$(".job_type").find('input[type=radio]').attr('checked', false);
+
+			// Add active to this button
+			$(this).addClass('selected');
+			
+			// add checked to the current buttons radio
+			var clicked = $(this).find('input[type=radio]');
+			clicked.attr('checked', true);
+			
+			// switch word count when different types clicked
+			var jt = clicked.val(); // job type id (jt)
+			if(jt == 1) {
+				$('.wordcount').val('500'); // Article
+			}
+			else if(jt == 2) {
+				$('.wordcount').val('400'); // PR
+			}
+			else if(jt == 3) {
+				$('.wordcount').val('400'); // web
+			}
+			else if(jt == 4) {
+				$('.wordcount').val('400'); // blog
+			}
+			else if(jt == 5) {
+				$('.wordcount').val('400'); // misc
+			}
+			else if(jt == 6) {
+				$('.wordcount').val('200'); // review
+			}
+			else if(jt == 7) {
+				$('.wordcount').val('150'); // prod
+			}
+			else if(jt == 8) {
+				$('.wordcount').val('100'); // social
+			}
+			
+			// Update costs and turnaround
+			getCost();
+			
+		});
+		
+		// Show spinner
+		$('.step_continue').click(function() {
+			$('.step_fields_loading').show();
+		});
+
+
+		// Show reccomended word counts
+		$('.word-guide').click(function() {
+			$('#modal-word-guide').modal({
+				show: true,
+				keyboard: true,
+				backdrop: true
+			});
+        });
+
+		// Ridiculous hack for shitty IE10 not supoporting conditional CSS anymore	
+		if ($.browser.msie && $.browser.version == 10) {
+ 			$(".wordcount").css({'padding': '1px', 'font-size': '24px'});
+		}	
+		
+		// If we have URL param type just show thew relevant signup
+		var job_type_id = getURLParameter('job_type_id');	
+		
+		// Already have a signup type in URL?
+		if(job_type_id != 'null' && IsNumeric(job_type_id)) {
+			// Trigger a click on the given id
+			var optionToTrigger = $('#JobStep1Form').find('#JobJobTypeId' + job_type_id);
+			// Does it exists?
+			if (optionToTrigger.length > 0) {
+				optionToTrigger.trigger( "click" );
+			}
+		}	
+
+	});
+
+</script>
+			
+	    </div>
+
+	</div>
+	
+</div>
+<script type="text/javascript" src="../js/jquery.placeholder.minc934.js?1392219067"></script>
+<script type="text/javascript" src="../js/jquery.copify4660.js?1393329342"></script>
+<script type="text/javascript" src="../js/bootstrap-modal1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-alerts1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-twipsy1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-popover1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-dropdown1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-scrollspy1dbd.js?1392219066"></script>
+<script type="text/javascript" src="../js/bootstrap-tabs1dbd.js?1392219066"></script>
+
+	
+<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+$.src='http://v2.zopim.com/?6vrYBkSi2y4JfO0fmBYc3Zg6QmSTEY9R';z.t=+new Date;$.
+type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+</script>
+<!--End of Zopim Live Chat Script-->
+
+
+
+<div style="display:none;">
+
+<!-- Google analytics -->
+<script type="text/javascript">
+/*****************************************
+*	Analytics, see Core/config for setttings
+/****************************************/
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15976992-1']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+	
+	
+	<!-- Google Remarketing Code for general Visitor -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 1024553307;
+	var google_conversion_label = "vOsHCPmsqQMQ2-LF6AM";
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+	</script>
+	<script type="text/javascript" src="../../www.googleadservices.com/pagead/f.txt">
+	</script>
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1024553307/?value=0&amp;label=vOsHCPmsqQMQ2-LF6AM&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>
+	
+
+<!-- AdRoll pixel -->
+<script type="text/javascript">
+adroll_adv_id = "V5TLBCZHI5G4DEXJFJCRSN";
+adroll_pix_id = "4LJ7T4BESRCDXKUXSGU5AG";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script>
+
+
+</div>
+
+
+
+</body>
+
+<!-- Mirrored from uk.copify.com/jobs/step_1?job_type_id=2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Oct 2014 06:45:48 GMT -->
+</html>

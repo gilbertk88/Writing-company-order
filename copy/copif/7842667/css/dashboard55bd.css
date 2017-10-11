@@ -1,0 +1,206 @@
+/* General
+================================================== */
+html {
+	height:100%;
+}
+body {
+	margin:0;
+	position: relative;
+	padding:0;
+	height:100%;
+	width:100%;
+	background: #FFFFFF;
+	font: 15px/23px "Lucida Sans","Liberation Sans","Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+	color: #8F989F;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}
+
+/* Typography
+================================================== */
+h1, h2 { color: #333333;  font-weight: normal; line-height:100%; margin-bottom:20px; margin-top:0; }
+h3, h4, h5, h6 { color: #333333; font-weight: normal; line-height:100%; margin-bottom:20px; margin-top:0; }
+h1 { font-size:30px; }
+h2 { font-size:26px; }
+h3 { font-size:20px; }
+h4 { font-size:16px; }
+h5 { font-size:14px; }
+h6 { font-size:12px; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+p { margin: 0 0 20px 0; }
+p img { margin: 0; }
+p.lead { font-size: 21px; line-height: 27px; color: #777777;  }
+em { font-style: italic; }
+strong { font-weight: bold; }
+small { font-size: 80%; }
+
+/* Blockquote
+================================================== */
+blockquote, blockquote p { font-size: 20px; line-height: 24px; font-style: italic; color:#666; }
+blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; }
+blockquote cite { display: block; font-size: 12px; color: #999999; }
+blockquote cite:before { content: "\2014 \0020"; }
+blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #999999; }
+hr { border: solid #DDDDDD; border-width: 1px 0 0; clear: both; margin: 20px 0 40px; height: 0; }
+
+/* Links
+================================================== */
+a,
+a:visited {
+	text-decoration: none;
+	outline: 0;
+	-webkit-transform: translateZ(0);
+	-webkit-transition:0.2s color linear;
+	-moz-transition:0.2s color linear;
+	transition:0.2s color linear;
+}
+a:hover, a:focus { color: #555555; }
+p a, p a:visited { line-height: inherit; }
+
+/* Lists
+================================================== */
+ul, ol { margin-bottom: 20px; }
+ul { list-style: none outside; }
+ol { list-style: decimal; }
+ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+ul.square { list-style: square outside; }
+ul.circle { list-style: circle outside; }
+ul.disc { list-style: disc outside; }
+ul ul, ul ol,
+ol ol, ol ul { margin-left: 30px; }
+ul ul li, ul ol li,
+ol ol li, ol ul li { margin-bottom: 0 }
+
+/* Buttons (green)
+================================================== */
+.btn-success {
+	background-color:#71B644;
+	border-color:#66AB38;
+	color:#FFF;
+}
+.btn-success:hover {
+	background-color:#66AB38;
+}
+
+/* Buttons (green)
+================================================== */
+.list-group-item {
+	color:#515151;
+}
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+	background-color:#71B644;
+	border-color:green;
+}
+
+/* Images
+================================================== */
+img {
+	max-width: 100%;
+	height: auto;
+}
+img.img-thumbnail {
+	margin-bottom:30px;
+}
+
+/* Header Section
+================================================== */
+#header-section {
+	background-color:#222222;
+}
+#ut-navigation {
+	padding:15px;
+	line-height:20px;
+}
+#ut-navigation ul li:after {
+	content:'·';
+	font-size:20px;
+	position:absolute;
+	color:#999999;
+	font-weight:bold;
+	right:0;
+	top:15px;
+}
+#ut-navigation ul li a {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size:12px;
+	padding-right:25px;
+}
+#ut-navigation ul li:last-child {
+	padding-right:15px;
+}
+#ut-navigation ul li:last-child:after {
+	display:none;
+}
+.navbar.navbar-arrow {border-bottom:none;}
+.navbar-toggle {margin-top:22px}
+
+/* Dashboard
+================================================== */
+
+/* Images - swapped out for retina ones in media query below */
+.logo_img {display:block; width:95px; height:50px; padding:15px; background-image: url('../img/logo_dashboard.png');}
+#main-content > .container {padding-top:100px;}
+
+/* Auth login
+================================================== */
+/*Hide sidebar*/
+.users-reset_password .sidebar,
+.users-reset_password .dashboard_search,
+.users-new_password .sidebar,
+.users-new_password .dashboard_search,
+.users-login .sidebar,
+.users-login .dashboard_search{display:none;}
+
+/*Login form*/
+.auth.login {margin:0 auto;}
+.auth.login {max-width:300px} 
+
+.auth.login .remember label {margin-left:5px;}
+.auth.login .forgotPassword {float:right;}
+
+.orSocialDivide {text-align:center;border-bottom:1px solid #ccc;margin-bottom:35px;}
+.orSocialDivide span {display:inline-block;position:relative;top:10px;color:#ccc;background:#fff;padding:0 12px;}
+
+/* Social auth buttons
+================================================== */
+.auth .socialLogin {padding:0; text-align:left;}
+.auth .socialLogin .socialLogin-button  {width:140px; height:35px;}
+.auth .socialLogin .facebook {display:inline-block; background:url('../img/socialsprite.png') no-repeat 0px 0px;}
+.auth .socialLogin .linkedin {float:right;display:inline-block; background:url('../img/socialsprite.png') no-repeat  0px -35px;}
+
+/* Wrong locale modal
+================================================== */
+
+#wrong-locale-modal-validation .modal-body {padding-left:10px; padding-right:10px;}
+.locale_message {}
+.locale_message .go_to_my_country {}
+.locale_message .go_to_my_country a {display:block;color:#222;font-size:20px;line-height:20px;padding:60px 150px 60px 20px;background-repeat:no-repeat;background-position:96% 50%; }
+.locale_message .go_to_my_country a:hover{text-decoration:none;}
+.locale_message .go_to_my_country.en-us a {background-image:url('../img/flag_en-us_128.png');}
+.locale_message .go_to_my_country.en-gb a {background-image:url('../img/flag_en-gb_128.png');}
+.locale_message .go_to_my_country.en-au a {background-image:url('../img/flag_en-au_128.png');}
+.locale_message span.ignore {display:block;text-align:right;}
+/* Fix bootstrap modal issue https://github.com/twbs/bootstrap/issues/9855 */
+body, .navbar-fixed-top, .navbar-fixed-bottom {margin-right: 0 !important;}
+
+/* Media queries
+================================================== */
+@media screen and (min-width: 768px) {
+	.locale_message .go_to_my_country a {font-size:30px; line-height:30px; padding-right:150px;}
+}
+
+/* Media queries for retina images
+================================================== */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+	only screen and (min--moz-device-pixel-ratio: 1.3),
+	only screen and (-o-min-device-pixel-ratio: 1.3/1),
+	only screen and (min-device-pixel-ratio: 1.3) {
+	/* dashboard logo  */
+	.logo_img {background-image: url('../img/logo-dashboard%402x.png'); background-size: 95px 50px}
+	/* social login btns */
+	.auth .socialLogin .facebook {background-image: url('../img/socialsprite%402x.png'); background-size:140px 70px; background-position: 0px 0px;}
+	.auth .socialLogin .linkedin {background-image: url('../img/socialsprite%402x.png'); background-size:140px 70px; background-position: 0px -35px;}
+}
+
+

@@ -1,0 +1,79 @@
+<?php
+/* @var $this TblArticleOrderController */
+/* @var $data TblArticleOrder */
+?>
+
+<div class="view">
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('ID')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->ID), array('view', 'id'=>$data->ID)); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('content_type')); ?>:</b>
+	<?php echo CHtml::encode($data->content_type); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('words')); ?>:</b>
+	<?php echo CHtml::encode($data->words); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('subject')); ?>:</b>
+	<?php echo CHtml::encode($data->subject); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('branded_generic')); ?>:</b>
+	<?php echo CHtml::encode($data->branded_generic); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('keywords')); ?>:</b>
+	<?php echo CHtml::encode($data->keywords); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('attach_file_path')); ?>:</b>
+	<?php echo CHtml::encode($data->attach_file_path); ?>
+	<br />
+
+	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('additional_info')); ?>:</b>
+	<?php echo CHtml::encode($data->additional_info); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>
+	<?php echo CHtml::encode($data->status); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('date_created')); ?>:</b>
+	<?php echo CHtml::encode($data->date_created); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Deadline')); ?>:</b>
+	<?php echo CHtml::encode($data->Deadline); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('date_completed')); ?>:</b>
+	<?php echo CHtml::encode($data->date_completed); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Writer')); ?>:</b>
+	<?php echo CHtml::encode($data->Writer); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Review')); ?>:</b>
+	<?php echo CHtml::encode($data->Review); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('owner')); ?>:</b>
+	<?php echo CHtml::encode($data->owner); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('cost')); ?>:</b>
+	<?php echo CHtml::encode($data->cost); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('payment_status')); ?>:</b>
+	<?php echo CHtml::encode($data->payment_status); ?>
+	<br />
+
+	*/ ?>
+
+</div>
